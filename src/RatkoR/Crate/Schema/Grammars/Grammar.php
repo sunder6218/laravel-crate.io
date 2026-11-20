@@ -64,7 +64,7 @@ class Grammar extends \Illuminate\Database\Schema\Grammars\Grammar
      *
      * @return string
      */
-    public function compileTableExists()
+    public function compileTableExists($schema = null, $table = null)
     {
         return 'select * from information_schema.tables where table_schema = ? and table_name = ?';
     }
@@ -204,7 +204,7 @@ class Grammar extends \Illuminate\Database\Schema\Grammars\Grammar
      * @param  \Illuminate\Database\Connection  $connection
      * @return string
      */
-    public function compileCreate(Blueprint $blueprint, Fluent $command, Connection $connection)
+    public function compileCreate(Blueprint $blueprint, Fluent $command, ?Connection $connection = null)
     {
         $columns = implode(', ', $this->getColumns($blueprint));
 
@@ -252,7 +252,7 @@ class Grammar extends \Illuminate\Database\Schema\Grammars\Grammar
      * @param  \Illuminate\Database\Connection  $connection
      * @return string
      */
-    public function compileCreateBlob(Blueprint $blueprint, Fluent $command, Connection $connection)
+    public function compileCreateBlob(Blueprint $blueprint, Fluent $command, ?Connection $connection = null)
     {
         $sql = 'create blob table ' . $this->wrapTable($blueprint) . "";
 
@@ -267,7 +267,7 @@ class Grammar extends \Illuminate\Database\Schema\Grammars\Grammar
      * @param  \Illuminate\Database\Connection  $connection
      * @return string
      */
-    public function compileDropBlob(Blueprint $blueprint, Fluent $command, Connection $connection)
+    public function compileDropBlob(Blueprint $blueprint, Fluent $command, ?Connection $connection = null)
     {
         return 'drop blob table ' . $this->wrapTable($blueprint) . "";
     }

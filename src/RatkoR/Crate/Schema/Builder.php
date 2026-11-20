@@ -53,10 +53,10 @@ class Builder extends \Illuminate\Database\Schema\Builder
     protected function createBlueprint($table, ?Closure $callback = null)
     {
         if (isset($this->resolver)) {
-            return call_user_func($this->resolver, $table, $callback);
+            return call_user_func($this->resolver, $this->connection, $table, $callback);
         }
 
-        return new Blueprint($table, $callback);
+        return new Blueprint($this->connection, $table, $callback);
     }
 
     /**

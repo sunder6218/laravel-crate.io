@@ -397,7 +397,7 @@ class Blueprint extends \Illuminate\Database\Schema\Blueprint {
      *
      * @throws NotImplementedException
      */
-    protected function addImpliedCommands(Connection $connection, Grammar $grammar)
+    protected function addImpliedCommands()
     {
         if (! $this->creating() && count($this->getAddedColumns()) > 0) {
             array_unshift($this->commands, $this->createCommand('add'));
