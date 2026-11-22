@@ -27,7 +27,7 @@ DB servers a lot.
 
 ### Installation
 
-Laravel 5.5, 6, 7, 8, 9, 10 and 11 are supported.
+Laravel 5.5, 6, 7, 8, 9, 10, 11, 12 and 13 are supported.
 
 > [!NOTE]
 > This package passes all it's tests and my own basic validation.
@@ -39,7 +39,7 @@ Laravel 5.5, 6, 7, 8, 9, 10 and 11 are supported.
 Add a require to your composer.json :
 
 ```bash
-    composer require ratkor/laravel-crate.io
+    composer require sunder6218/laravel-crate.io
 ```
 
 > [!NOTE]
@@ -54,6 +54,10 @@ You'll have to install crate.io server, of course. See installation
 instructions on their site.
 
 #### PHP
+
+The latest version supports PHP 8.0 up to and including **PHP 8.5**
+(note that each Laravel version has its own minimum PHP requirement,
+e.g. Laravel 13 requires a newer PHP than Laravel 11).
 
 Version 12 supports PHP 8.1.
 
@@ -499,6 +503,11 @@ $article->delete();
 ```
 
 ### Changelog
+
+#### Version 15
+
+Support for laravel 12 and 13. Added PHP 8.5 compatibility.
+Package renamed to `sunder6218/laravel-crate.io`.
 
 #### Version 14
 
