@@ -1,5 +1,5 @@
 {
-    "name": "ratkor/laravel-crate.io",
+    "name": "sunder6218/laravel-crate.io",
     "description": "Crate.io driver for Laravel",
     "license": "MIT",
     "keywords" : ["laravel5","laravel","crate.io","crate","pdo_crate"],
