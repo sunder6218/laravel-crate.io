@@ -5,12 +5,8 @@
     "keywords" : ["laravel5","laravel","crate.io","crate","pdo_crate"],
     "authors": [
         {
-            "name": "Ratko Rudic",
-            "email": "ratko@kramfid.org"
-        },
-        {
-            "name": "Julian Martin",
-            "email": "julian.martin@russmedia.com"
+            "name": "Sunder S",
+            "email": "sunder@sinch.com"
         }
     ],
     "require": {
